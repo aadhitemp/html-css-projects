@@ -1,0 +1,214 @@
+/* p{
+    color: purple;
+    font-size: 64px;
+} 
+Css properties are inherited and they are read based what's seen last    
+
+*/
+
+/* *{
+    font-family: monospace;
+    border: 1px solid red;
+}
+
+html{
+    font-size: 22px;
+}
+
+body{
+    font-size: 22px;
+}
+
+p{
+    color: purple;
+}
+
+h2,h1{
+    color:blue;
+}
+
+
+.gray{
+    color: gray;
+}
+
+#second{
+    font-style: italic;
+} */
+
+/* p span{
+    text-transform: uppercase;
+    background-color: gold!important;
+} 
+ marking !important overrides everything else, don't use it.  
+ 
+ the more specific selector, the better it's implication.
+ Use a specificity calculator, if we're troubled, id is most specific, class is less, element is even less
+*/
+
+/* .highlight{
+    text-transform: uppercase;
+    background-color: gold;
+} */
+
+
+
+/* Colors
+    There are 140 color names available in html
+    background can be used instead of background-color to set background color.
+    color refers to text color
+    apart from color names, we can use rgb() or rgba(), alpha range is from 0 to 1, 0 being transparent and 1 being opaque.
+    Another option is hex values, #FF00FF, just like rgb, when color codes match, we can use a three character approach, like #fff, for white, #f0a is kind of pink, that is #ff00aa
+    There also hsl and hsw, (hue, saturation and lightness), also variants with alpha
+    Then again, you can switch between them by tapping on the value on the selector in vs code. 
+
+    coolors.co // select colors sets and and an option for contrast checker
+    webaim
+
+    body{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: #ffefd5;
+    color: rgb(0,0, 0);
+}
+
+p{
+    color: #333;
+}
+*/
+
+
+
+
+/* 
+    CSS Units.
+    //use mdn reference for units, 
+    px is normally the only absolute unit that's used.
+    The default font size is 16,
+    generally, don't prefer absoulte for font size, using 16px may prevent user setting from overriding the font-size
+
+    numbers, length and percentages
+    percentage is fraction of some other value, we don't generally use that for font-size
+    a block level element has a width of 100%, width specificed in % works based on the width of the parent.
+
+    relative lengths
+    rem, that is generally used to set font-size, but don't set it on the html
+    1rem means, 1* the default size of root element, so if font-size if 16 by default for p and we specify it as 2rem, then we would get a font-size of 32
+    The root value is set by the browser, so setting rem values of main for font size wouldn't have any effect on p elements
+    em on the other hands looks at the parent and not the root element
+    so 1em on a p tag nested within main would look at the font-size specified in main and not root
+    As per our guys advice, use ems for text, em is generally used in paddings and margins
+
+    ch, glyph or something, 
+    it's used to determine when something falls off to a new line.
+
+    vw, viewport width,
+    well, that's how wide the window, we can specify, how much of the viewport our item has to take, by setting that.
+
+    vh, viewport height,
+    You it set the height
+
+    body{
+    min-height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 50vw;
+    background-color: skyblue;
+    font-size: 2rem;
+}
+
+p{
+    font-size: 0.8rem;
+    width: 40ch;
+    
+}
+
+
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 
+ The box model.
+ content>padding>border>margin :
+ default: box-sizing : content => width=sizeof(content)
+    box-sising: border-box=> width=content+padding+border
+
+ There's a default value for margin and other things, 
+ when no margin or that particular already specified value is given, the default is used..
+ To change this behaviour, we use a css reset, use the wildcard aka, universal selector and set a value, that's it.
+
+ setting box-sizing as border-box makes border, content and padding contribute to the actual width, t
+ the default behaviour of specifying width is to adjust just for the content.
+
+ generally, we don't provide css directly to the elements, but rather to whatever is containing
+  the element, so instead of an h1, we'd give the css to the header which encompasses it
+
+  border-top-width: 5px;
+    border-top-style: double;
+    border-right: 10px dotted blue;
+
+.container{
+    margin: 1.5em 2em 3em 4em; top>left>bottom>right
+    margin: 1.5em 2em 2em; top> left and right > bottom 
+    margin: 1.5em 2em; top and bottom > left and right
+    margin: 1.5em; all set to 1.5
+} 
+
+    margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em; 
+
+.circle{
+    margin: 3rem auto;
+    
+    
+    Margin
+    setting auto for left and right will center the container, i.e, centers horizontally
+
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px;
+
+    a border-radius of half of width and height creates a circle.
+
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+
+    .container{
+    border: 10px outset red;
+
+    font-size: 1.5rem;
+
+    margin: 1.5em;
+    padding: 1.5em;
+    outline: 5px solid purple;
+    outline-offset: -15px;
+}
+}
+
+
+outline is not part of the box model and an offset can be specified for it, it can be made negative and thereby within the box
+
+*/

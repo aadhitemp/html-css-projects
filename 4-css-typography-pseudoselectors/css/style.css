@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*  
+    Typography is the way that text is arranged and presented.
+    form's and button don't inherit text
+
+input, button{
+    font: inherit;
+}
+
+text-decoration: none; 
+removing underline from anchors
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: right;
+
+    
+    text-indent: 2em;
+    adding the space when paragrphs begin
+
+ 
+    
+    letter-spacing: 0.1em; 
+    word-spacing: 0.5em;
+
+    
+    font-weight: bolder;
+    just like in flutter
+
+    
+    font-style: normal;
+    whether it's italic or oblique or something
+
+    font-family ...fantasy, monospace,
+    fallbacks, so 'Courier New', Courier, monospace ... so goes got checks if it's there, then goes to next and so on.
+
+    websafe fonts
+
+    ///using google fonts
+
+    p {
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+}
+
+*/
+
+/* importing fonts */
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+
+}
+
+
+/* 
+Psuedoclass
+once, we override something, everything gets overridden,
+ that is, if we change anchor color, anchor hover and visted colors also stop working until we set them.
+
+ But, if we're specific and only apply to visted psuedoclass, then nothing apart from that gets affected.
+ just think like this, we're selecting a class and not a element, more specific things cascade or something along those lines
+ The good old specificity calculator.
+ The order actally maters, and for setting anchor pseudoclass
+ set them in the below order
+ Setting focus is important for accessibility
+*/
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover, a:focus{
+    color: dodgerblue;
+}
+
+a:active{
+    color: red;
+}

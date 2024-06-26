@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+        p{
+            color: limegreen;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <p style="color: blue;">hello purple</p>
+      -->
+
+    <header class="container">
+        <h1>CSS Box model</h1>
+    </header>
+    <main class="container">
+
+    <article>
+        <h2>Article3</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet magni, omnis eos error qui quas eveniet maiores id debitis tempore eius doloremque. Asperiores expedita doloribus libero explicabo, perspiciatis laboriosam est.
+        Aut autem hic eum maiores cupiditate harum provident. Repellendus, hic architecto! Aspernatur dicta laboriosam itaque sint facilis temporibus ex voluptatum expedita reprehenderit, voluptatibus laborum eius accusamus vitae laudantium. Veritatis, cum?
+    </p>
+    </article>
+    <article id="second">
+        <h2>Artcile2</h2>
+        <p class="gray">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio labore quos fugit sapiente quas sed, vero iste perferendis quod commodi libero, tenetur molestiae. Earum corrupti id placeat repudiandae saepe laboriosam!
+        Saepe, quas. Explicabo, voluptate voluptatem suscipit dicta provident id natus <span class="highlight">sapiente</span>sapiente beatae animi doloremque reprehenderit deserunt qui modi recusandae aperiam quibusdam reiciendis quam facere alias cum minus sint? Corporis, similique!
+        Aspernatur aliquam necessitatibus mollitia quisquam repellat provident. Ullam non illum explicabo voluptatibus enim autem necessitatibus maxime! Nemo ipsam eveniet in, sit laboriosam eius perferendis voluptatibus. Vitae quo ea iste voluptas?
+    </p>
+    </article>
+    <article>   
+         <h2>Artcile1</h2>
+        <p class="gray">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dicta doloribus aut dignissimos voluptatum quam sint nam voluptates ducimus voluptatem ab placeat, eveniet praesentium at vel alias veritatis voluptate. Rerum.
+        Amet, error magni! Quasi culpa quisquam cupiditate dignissimos dolorum praesentium reprehenderit dolore quod quidem excepturi! Id eaque qui temporibus illum voluptas cumque iure beatae dolor numquam ab architecto, aperiam sapiente!
+        Inventore qui odio accusantium nam, est excepturi, cumque itaque in sint fugiat officiis modi? Natus reprehenderit minima deserunt amet dolores vel nemo tempora, repudiandae dignissimos laudantium provident illo necessitatibus accusamus!
+        Dolorum aut, eligendi cupiditate ullam itaque aspernatur labore,<span class="highlight">quisquam</span>  commodi qui iusto praesentium corporis maxime? Soluta illo ea omnis. Quasi ipsum architecto corrupti error, mollitia veniam libero! Facere, rerum veniam.
+    </p>
+    </article>
+
+    <div class="circle"></div>
+</main>
+
+</body>
+</html>
+<!-- Improper css is just ignored, like spelling colour as color,
+  to fix broken css, you can use some css validator and give it the css file
+  
+  >You should rarely use id selector 
+  #second{
+  }
+  >class selector
+  .gray{
+    color: gray;
+  }
+
+  >multiple selectors, these won't work without comma
+  h1, h2{
+    color: blue;
+  }
+
+  > so not using comma would mean to select h2 within an h1 if used as above
+  h1 h2{
+  color: blue;
+  }
+
+  p span {
+   a span within a p is selected
+  }
+
+  >universal selector
+  *{
+  
+  }
+
+  The casacading nature: the last seen definition is used, so classes, can override this behaviour, i.e., this definition is seen with the element, so the element behaves according to the class
+  The most specific rule is applied, what css is applied can be seen from the devtools, overridden ones are crossed out.
+
+  Inheritance:
+  underlying or nested elements inherits, generally font related things are inherited, while others are not. so giving a border to body would only show a border on that element
+  Using a universal selector would apply rules to everything though.
+  That's not inheritance, but it's selecting everything
+
+  from elements don't inherit typography, the below line changes that behaviour.
+
+
+
+  button, input, textarea, select{
+   font: inherit;
+   }
+
+   use body or html to keep code dry(don't repeat yourself)
+  
+
+   p*10>lorem 
+   emmet for creating 10 p elements with lorem text inside.
+  -->
