@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dave grapy">
+    <meta name="descirption" content="This page contains all the things I am learning how to create as I learn html">
+    <title>My First Web Page</title>
+    <link rel="icon" href="html5.jpeg" type="image/x-icon">
+    <!-- <style>
+        html{
+            s
+        }
+    </style> -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+    <h1>hello world!</h1>
+
+    <hr>
+        <nav aria-label="primary-navigation">
+            <!-- There can be more than one navs, but when there is they have to be labelled, using aria-label -->
+            <ul>
+                <li>
+                    <a href="#html">Learn html</a>
+                </li>
+                <li>
+                    <a href="#vacation">Planning a vacation</a>
+                </li>
+                <li><a href="#Contact">Contact me</a></li>
+            </ul>
+        </nav>
+    <hr>
+    <!-- There can be more than one header  
+     hr also has semantic meaning, it denotes some changes of topic -->
+</header>
+    <main>
+        <!-- There can only be one main element per page -->
+    
+    <article id="html">
+    <h2>I'm ready to learn HTML</h2>
+
+    <figure>
+        <figcaption>Example html code</figcaption>
+        <code>
+            &lt;h1&gt;hello World!&lt;/h1&gt;
+        </code>
+    </figure>
+
+    <figure>
+    <img src="img/img1.jpeg" alt="Random Text" title="Something about hope" width="300" height="400">
+        <figcaption>Caribbean Beach Getaway</figcaption>
+</figure>
+    <p>This is my first web page.</p>
+    <h3>My Daily Schedule</h3>
+    <p>Let me tell you how:  </p>
+        <ol>
+        <li>... I Learn more about web dev..</li>
+        <li>...I plan out my schedule.</li>
+        <li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org/">MDN</a></abbr></li>
+        </ol>
+        <aside>
+            <!-- another semantic element -->
+            <details>
+                <summary>
+                    <!-- The details and the summary work together, like showing some warranty information or something which is not the main focus of the article -->
+                    Guess the <mark>number of hours </mark>
+                     I code per day
+                </summary>
+                <p>
+                    I start at <time datetime="08:00">8 am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning.
+                </p>
+            </details>
+        </aside>
+        <table>
+            <caption>My Daily Schedule</caption>
+            <!-- Semantic caption, thead-->
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <!-- the scope declaration is for assistive technologies, another option is to use an id isntead of the scope and for each item, set headers as ids, of both the row and column reference -->
+                <th scope="col">Activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Morning</th>
+                <td>
+                    <time datetime="08:00">8am</time>- <time datetime="11:00">11am
+
+                    </time>
+                </td>
+                <td>Write code</td>
+            </tr>
+            <tr>
+                <th scope="row">Break</th>
+                <td>
+                    <time datetime="11:00">11am</time>- <time datetime="12:00">12pm
+
+                    </time>
+                </td>
+                <td>Eat luch</td>
+            </tr>
+            <tr>
+                <th scope="row">Afternoon</th>
+                <td>
+                    <time datetime="12:00">12pm</time>- <time datetime="17:00">5pm
+
+                    </time>
+                </td>
+                <td>Study for other courses</td>
+            </tr>
+            <tr>
+                <td colspan="3">Free Time</td>
+            </tr>
+            <tr>
+                <th scope="row">Night</th>
+                <td rowspan="2">All other times</td>
+                <td>free Time</td>
+            </tr>
+            <tr>
+                
+                <th scope="row">Evening</th>
+                <td>sleep</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- Another semantic element, like thead, tbody..tfoot -->
+       
+            <tr>
+                <td colspan="3">And that's what I do every day, 5 days a week. Just eat, sleep, code .. and recharge!</td>
+            </tr>
+        </tfoot>
+        </table>
+  
+</article>
+    <hr>
+    <article id="vacation"> 
+        <!-- <section></section> -->
+        <!-- it makes more sense to mark this as an article instead of a section as these denote different articles and not a section of... -->
+    <h2>I'm am also planning a vacation</h2>
+    <img src="img/img2.jpg" alt="Something else" width="420" loading="lazy">
+    <p>Okay, I'm not sure I'd get to travel, anyway</p>
+    <h3>Places I'd<em> like to Visit</em> </h3>
+    <p><strong>Let me tell you</strong> how I..</p>
+    
+    <h3>Places I'd like to avoid</h3>
+
+    <p>Warm places.</p>
+
+    <dl>
+        <dt>North Pole</dt>
+        <dd>I hear this is <strong>cold</strong>!</dd>
+        <dt>South Pole</dt>
+        <dd>cold</dd>
+        <dt>Mountain tops</dt>
+        <dd>Again, cold </dd>
+    </dl>
+    <!-- <div></div> these have no semantic meaning, and need additional attributes to let assistive technologies interpret their meaning. -->
+     <!-- <span></span> just like divs, they have no meaning by themselves, no semantics, well, use these when no other semantic elements makes sense -->
+      <!-- html5 outliner, use that extension, maybe... -->
+
+    <address>
+        Some address 
+    </address>
+    <figure>
+    <img src="img/img4.jpg" alt="something" title="it's 5 o'Clock somewhere" loading="lazy" width="500">
+    <figcaption>Another thing</figcaption>
+</figure>
+</article>
+
+<hr>
+<article id="Contact">
+<h2>Contact me</h2>
+    <p>I'd really like to hear from you</p>
+
+    <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+            <legend>Personal Info</legend>
+        <p>
+        <label for="firstName">First Name:</label>
+        <!-- input:text  emmet for creating text type input -->
+        <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+    </p>
+    <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required >
+    </p>
+    <p>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" placeholder="Your secret"  required >
+    </p>
+    <p>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" placeholder="555555555" pattern="[0-9]{10}" required>
+    </p>
+    <p>
+        <label for="decade">Favourite decade:</label>
+        <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" required>
+    </p>
+
+    <p>
+        <label for="coffee">Favorite coffe:</label>
+        <select name="coffee" id="coffee" multiple size="5">
+            <optgroup label="Coffees">
+            <option value="regular coffee">Regular Coffe</option>
+            <option value="iced coffee">Iced coffee</option>
+        </optgroup>
+            <optgroup label="Espresso drinks">
+            <option value="Latte" selected>Latte </option>
+            <option value="cappuccino">cappuccino</option>
+            <option value="cortado">cortado</option>
+            <option value="americano">americano</option>
+        </optgroup>
+            <option value="others">others</option>
+        
+        </select>
+    </p>
+        <!-- <p>
+            <label for="coffee">Favorite coffee:</label>
+            <input type="text" name="coffee" id="coffee" list="coffee-list">
+            <datalist id="coffee-list">
+                    <option value="coffee">
+                    <option value="latte">
+                    <option value="Espresso">
+                    <option value="cortado">
+                    <option value="americano">
+                    <option value="other">
+
+            </datalist>
+        </p> -->
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>What is your Favorite food?</legend>
+        <p>
+            <input type="radio" name="food" id="tacos" value="tacos">
+            <label for="tacos">Tacos</label>
+        </p>
+        <p>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">pizza</label>
+        </p>
+        <p>
+            <input type="radio" name="food" id="other" value="other">
+            <label for="other">other</label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Do you have pets?</legend>
+        <p>
+            <input type="checkbox" name="pets" id="dog" value="dog">
+            <label for="dog">Dog</label>
+            <input type="checkbox" name="pets" id="Cat" value="Cat">
+            <label for="Cat">Cat</label>
+            <input type="checkbox" name="pets" id="Fish" value="Fish">
+            <label for="Fish">Fish</label>
+            <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+            <label for="otherPet">Other</label>
+        </p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>
+            Send me a note
+        </legend>
+        <label for="message">Your Message:</label>
+        <br>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+
+    </fieldset>
+    <br>
+    <!-- you can create submit button either using input type of submit or by 
+     creating a button, according to our guy the button element gives more options -->
+     <button type="submit">Submit</button>
+     <button type="submit" formaction="https://httpbin.org/post" formmethod="post"> post</button>
+     <button type="reset">reset</button>
+
+    </form>
+
+</article>
+
+</main>
+    <hr>
+    <footer>
+        <p>
+    &lt;&lt;&lt; &copy;<a href="/about.html">MyName</a>  &gt;&gt;&gt;
+</p>
+    <a href="#">Back to top</a>
+    <!-- Just like headers, there can be more than one footer per page -->
+</footer>
+</body>
+</html>
+<!-- validator.w3.org
+ use that to validate the html
+    shift+alt+arrow-down (copy one line down)
+
+Block level elements and inline elements
+<em> emphasis</em>
+<strong>
+    &nbsp
+    that's an html entities, normally starts with an &
+
+    <abbr> can't be read by screen reader
+
+&nbsp; for creating space
+ctrl+d to select similar items
+
+absolute and relative reference
+
+width and height attributes of img elements are optional, but now it is recommended to use it, just specifying one rescales the image
+
+unsplash
+placeholder.com
+fill murray
+irfanview
+tinypng.com /tinyjpg.com/ need to compress images.
+-->
