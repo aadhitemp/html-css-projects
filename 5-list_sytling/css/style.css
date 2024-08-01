@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Styling ordered and unorded lists */
+
+body{
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+
+/* ol{
+    list-style-type: none;
+    padding: 0;
+}
+ You can make an ordered list look like an unorderd one, by changing the type to disc   
+*/
+
+
+/* Styling unorderd list */
+ul{
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    color: #00f;
+    line-height: 1.6;
+    /* list-style-image: url("../images/img1.png"); */
+    /* list-style: square url("../images/img1.jpeg") inside; */
+    /* short hand for list-style uses square if the image fallback doesn't work, and it's also inside, 
+    so text align center moves the marker with it */
+}
+
+/* STYLING THE MARKER */
+::marker{
+    color: red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only $5 >>";
+}

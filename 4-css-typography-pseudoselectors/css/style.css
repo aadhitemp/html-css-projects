@@ -68,7 +68,7 @@ once, we override something, everything gets overridden,
  set them in the below order
  Setting focus is important for accessibility
 */
-a{
+/* a{
     text-decoration: none;
     cursor: pointer;
     color: blue;
@@ -80,6 +80,24 @@ a:visited{
 
 a:hover, a:focus{
     color: dodgerblue;
+}
+
+a:active{
+    color: red;
+} */
+
+a{
+    color: hsl(207, 44%, 49%);
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover, a:focus{
+    /* color: hsl(189, 44%, 49%); */
+    opacity: 0.8;
+    background: gold;
 }
 
 a:active{
