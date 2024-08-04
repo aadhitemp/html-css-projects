@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+    /* Block level elements stack on top of each other and always creates a new line
+    100% width of whatever is given */
+    /* Inline elements do not stack on top of each other
+    width of the element is only taken */
+    /* A span, which is inline won't have any effect on giving height, width, or margin...
+    but declaring it as inline block allows us to use those properties.
+    without actually falling over to a new line */
+
+    /* Display none would make the element invisible, like removed from the DOM like of invisible, won't be accesible to screen readers, or that's what he said. */
+/* 
+
+
+p{
+    background-color: lightgray;
+}
+
+.opposite{
+    display: inline-block;
+
+    background-color: #333;
+    color: whitesmoke;
+    padding: 4rem;
+    margin-top: 100px;
+    height: 200px;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: #000000;
+    margin: 0;
+}
+
+li{
+    display: inline-block;
+    margin-inline: 0.5rem;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover,
+li a:focus{
+    text-decoration: underline;
+
+}
